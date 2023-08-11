@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="estilos/log.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/parsley.js/2.9.2/parsley.min.js"></script>
+    <script>
+
+        function validar() {
+                    
+                    swal("Éxito", "Inicio de sesión exitoso.", "success");
+                    return true;
+                }
+  
+
+    </script>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Volver</a></li>
+            </ul>
+        </nav>
+    </header>
+    <section class="formulariologin">
+        
+        <form name="formulario" class="form-validacion" id="formR" onsubmit="return validacion()">
+        
+            <h5>Login</h5>
+            <input class="controls" type="text" name="usuario" value="" placeholder="usuario" required>
+            <input class="controls" type="password" name="contraseña" value="" placeholder="contraseña" required>
+            <a href=""><input class="buttons" type="submit" name="" value="Ingresar"></a>
+            <p><a href="#">¿olvidaste tu contraseña?</a></p>
+
+        </form>
+    </section>
+</body>
+</html>

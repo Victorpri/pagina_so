@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="estilos/registro.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/parsley.js/2.9.2/parsley.min.js"></script>
+    <script>
+
+        function validacion() {
+
+            var terminos = document.formulario.condicional; 
+                if (terminos.checked == true){
+                
+                    swal("Los datos se enviaron correctamente","\n \n Gracias por registrarse en Victor's Casino");
+                }else{
+                    swal("Los datos no se enviaron correctamente","\n \n Debes de aceptar los terminos y condiciones")
+                }
+        }
+  
+
+    </script>
+    
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Volver</a></li>
+            </ul>
+        </nav>
+    </header>
+    <section class="formulariologin">
+        
+        <form name="formulario" class="form-validacion" id="formR" onsubmit="return validacion()">
+
+            <h5>Login</h5>
+
+
+            <input class="controls" type="text" name="nombres" id="nombres" placeholder="Ingrese su Nombre" required>
+            <input class="controls" type="text" name="apellidos" id="apellidos" placeholder="Ingrese su Apellido" required>
+            <input class="controls" type="tel" name="telefono" id="correo" placeholder="Ingrese su numero de telefono" required>
+            <input class="controls" type="text" name="" id="dirrecion" placeholder="Ingrese dirrecion"required>
+            <input class="controls" type="email" name="correo" id="correo" placeholder="Ingrese su correo">
+            <input class="controls" type="password" name="contraseña" id="contraseña" placeholder="Ingrese su contraseña" required>
+            <input class="controls" type="password" name="verficacionContraseña" id="verficacion-contraseña" placeholder="Verifique su contraseña" required>
+            <h6>Ingrese fecha de nacimiento</h6>
+            <input type="datetime-local" name="datetime-local" id="fecha_nac" >
+            <a href="#"><input class="botons" type="submit" value="Siguiente"></a>
+            <div class="entrada">
+                <input type="checkbox" name="condicional" value="aceptado" /> He leido y acepto las condiciones del contrato <br/><br/>
+            </div>
+
+        </form>
+    </section>
+</body>
+</html>
